@@ -2,46 +2,82 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  
-  /* 1. Centers flex children horizontally across the page */
-  align-items: center; 
-  
-  /* 2. Centers text lines inside headings and paragraphs */
-  text-align: center; 
-}
-
-/* Ensure the main block takes up width while staying centered */
-main {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 800px; /* Keeps the content area constrained nicely */
+  padding: 2.5rem 1.5rem;
 }
 
-.book-card {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin: 1rem 0;
+.app-container {
   width: 100%;
-  max-width: 500px; /* Keeps the cards from stretching too wide */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+  padding: 2.5rem 2rem;
   text-align: center;
 }
 
-.book-card h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: #1a202c;
-  font-size: 1.25rem;
+/* Header typography & styling */
+.app-container > h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.25rem 0;
+  background: linear-gradient(135deg, #0f172a 0%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.book-card p {
-  margin: 0.25rem 0;
-  color: #4a5568;
+.app-container > h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 1.25rem 0 0.5rem 0;
+}
+
+.app-container > p {
+  margin: 0.4rem 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Status badge styling */
+.app-container > p:nth-of-type(1) {
+  display: inline-block;
+  font-weight: 600;
+  color: #166534;
+  background-color: #dcfce7;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #bbf7d0;
+}
+
+main {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+footer {
+  width: 100%;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
 }
