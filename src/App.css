@@ -1,0 +1,47 @@
+#root, .app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  /* 1. Centers flex children horizontally across the page */
+  align-items: center; 
+  
+  /* 2. Centers text lines inside headings and paragraphs */
+  text-align: center; 
+}
+
+/* Ensure the main block takes up width while staying centered */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Keeps the content area constrained nicely */
+}
+
+.book-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 500px; /* Keeps the cards from stretching too wide */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.book-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #1a202c;
+  font-size: 1.25rem;
+}
+
+.book-card p {
+  margin: 0.25rem 0;
+  color: #4a5568;
+}

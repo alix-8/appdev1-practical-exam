@@ -1,6 +1,6 @@
 function BookThree() {
     return (
-        <div>
+        <div className="book-card">
             <h2>All The Light We Cannot See</h2>
             <p>Author: Anthony Doerr</p>
         </div>
